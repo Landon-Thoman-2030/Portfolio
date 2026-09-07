@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio website for Landon Thoman, a freshman in the P.C. Rossin College of Engineering and Applied Sciences at Lehigh University with an interest in civil engineering."
+    />
+    <title>Landon Thoman | Lehigh Engineering Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=4" />
+  </head>
+  <body class="home-page">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#top" class="brand" aria-label="Landon Thoman home">LT</a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#about">About</a>
+
+          <div class="nav-item has-menu">
+            <a href="#experience" class="nav-label">Academics</a>
+            <button class="nav-trigger" aria-expanded="false" aria-controls="academics-menu" aria-label="Open Academics menu">
+              <span class="chevron">▾</span>
+            </button>
+            <div id="academics-menu" class="dropdown-menu">
+              <a href="#experience">Overview</a>
+              <a href="high-school-cumberland-valley.html">Cumberland Valley High School</a>
+              <a href="course-calculus-1.html">Calculus 1</a>
+              <a href="course-academic-analytical-writing.html">Academic and Analytical Writing</a>
+              <a href="course-introductory-physics-1.html">Introductory Physics 1</a>
+              <a href="course-integrated-engineering-practice.html">Integrated Engineering Practice</a>
+            </div>
+          </div>
+
+          <div class="nav-item has-menu">
+            <a href="#skills" class="nav-label">Skills</a>
+            <button class="nav-trigger" aria-expanded="false" aria-controls="skills-menu" aria-label="Open Skills menu">
+              <span class="chevron">▾</span>
+            </button>
+            <div id="skills-menu" class="dropdown-menu">
+              <a href="#skills">Overview</a>
+              <a href="skill-cad.html">CAD</a>
+              <a href="skill-bim.html">BIM</a>
+              <a href="skill-python.html">Python</a>
+              <a href="skill-ai.html">AI</a>
+            </div>
+          </div>
+
+          <div class="nav-item has-menu">
+            <a href="#research" class="nav-label">Research</a>
+            <button class="nav-trigger" aria-expanded="false" aria-controls="research-menu" aria-label="Open Research menu">
+              <span class="chevron">▾</span>
+            </button>
+            <div id="research-menu" class="dropdown-menu">
+              <a href="#research">Overview</a>
+              <a href="research-preparation.html">Research preparation</a>
+              <a href="research-mentorship.html">Mentorship</a>
+              <a href="research-learning-areas.html">Learning areas</a>
+            </div>
+          </div>
+
+          <div class="nav-item has-menu">
+            <a href="#hobbies" class="nav-label">Hobbies</a>
+            <button class="nav-trigger" aria-expanded="false" aria-controls="hobbies-menu" aria-label="Open Hobbies menu">
+              <span class="chevron">▾</span>
+            </button>
+            <div id="hobbies-menu" class="dropdown-menu">
+              <a href="#hobbies">Overview</a>
+              <a href="hobbies-interests.html">Full Hobbies &amp; Interests</a>
+              <a href="hobbies-camping-hiking.html">Camping &amp; Hiking</a>
+                <a href="hobbies-history-philosophy-psychology.html">History, Genealogy, Philosophy &amp; Psychology</a>
+            </div>
+          </div>
+
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">◐</span>
+          <span class="theme-label">Dark</span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <div class="school-badge">Lehigh University • P.C. Rossin College • Freshman</div>
+            <p class="eyebrow">Engineering Student</p>
+            <h1>Lehigh engineering student preparing for a future in civil engineering.</h1>
+            <p class="intro-text">
+              I’m Landon Thoman, a freshman in the P.C. Rossin College of Engineering and Applied Sciences at
+              Lehigh University. I am currently undecided in engineering, with the intention of majoring in civil
+              engineering. I am building my foundation through coursework, technical skills, and research preparation.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#research">Explore my preparation</a>
+              <a class="btn btn-secondary" href="#contact">Contact me</a>
+            </div>
+            <ul class="hero-meta" aria-label="Student highlights">
+              <li><strong>Lehigh</strong> University</li>
+              <li><strong>Rossin</strong> Engineering</li>
+              <li><strong>Civil</strong> intent</li>
+            </ul>
+          </div>
+
+          <div class="hero-card reveal">
+            <div class="portrait" aria-label="Civil engineering and infrastructure imagery">
+              <span class="portrait-caption">Civil / Water / Resilience</span>
+            </div>
+            <div class="hero-note">
+              <span>Current Direction</span>
+              <strong>Civil Engineering</strong>
+              <p>Exploring the engineering path at Lehigh.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container split-layout">
+          <div class="section-heading reveal">
+            <p class="eyebrow">About Me</p>
+            <h2>Exploring civil engineering through coursework, technical skills, and research preparation.</h2>
+          </div>
+          <div class="about-copy reveal">
+            <p>
+              I am interested in civil engineering and the ways technical design, data, and planning are used to
+              understand real engineering problems.
+            </p>
+            <p>
+              My current goals are to strengthen my engineering foundation, continue developing useful technical
+              skills, and prepare to contribute to future research.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section alt-section">
+        <div class="container">
+          <div class="section-heading center reveal">
+            <p class="eyebrow">Academics</p>
+            <h2>Building a strong engineering foundation with a civil focus.</h2>
+          </div>
+
+          <div class="timeline reveal">
+            <article class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <p class="time-range">2022 — 2026</p>
+                <h3>Cumberland Valley High School</h3>
+                <p>Attended Cumberland Valley 9th Grade Academy before continuing at Cumberland Valley High School. Official graduation date: May 30, 2026.</p>
+                <a class="course-back" href="high-school-cumberland-valley.html">View academic record →</a>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <p class="time-range">2026 — Present</p>
+                <h3>Lehigh University</h3>
+                <p>Freshman year in the P.C. Rossin College of Engineering and Applied Sciences, exploring engineering disciplines while preparing for a civil engineering major.</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <p class="time-range">1st Semester of College</p>
+                <h3>Current college classes</h3>
+                <ul class="course-list">
+                  <li><a href="course-calculus-1.html">Calculus 1</a></li>
+                  <li><a href="course-academic-analytical-writing.html">Academic and Analytical Writing</a></li>
+                  <li><a href="course-introductory-physics-1.html">Introductory Physics 1</a></li>
+                  <li><a href="course-integrated-engineering-practice.html">Integrated Engineering Practice</a></li>
+                </ul>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <p class="time-range">Career interest</p>
+                <h3>Civil Engineering</h3>
+                <p>Interested in infrastructure, systems design, environmental sustainability, and creating long-lasting impacts in the built environment.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section alt-section skills-section">
+        <div class="container">
+          <div class="section-heading center reveal">
+            <p class="eyebrow">Strengths</p>
+            <h2>Skills that support my work as a future civil engineer.</h2>
+          </div>
+
+          <div class="skills-grid">
+            <a href="skill-cad.html" class="skill-card reveal">
+              <h3>CAD</h3>
+              <p>Design drafting, technical layouts, and precise visual communication for engineering work.</p>
+            </a>
+            <a href="skill-bim.html" class="skill-card reveal">
+              <h3>BIM</h3>
+              <p>Building information modeling for coordinated planning, visualization, and project understanding.</p>
+            </a>
+            <a href="skill-python.html" class="skill-card reveal">
+              <h3>Python</h3>
+              <p>Automation, analysis, and computation to solve technical and data-oriented problems efficiently.</p>
+            </a>
+            <a href="skill-ai.html" class="skill-card reveal">
+              <h3>AI</h3>
+              <p>Exploring how artificial intelligence can support analysis, automation, and modern engineering workflows.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="research" class="section research-section">
+        <div class="container">
+          <div class="section-heading center reveal">
+            <p class="eyebrow">Research Preparation</p>
+            <h2>Building the foundation for future research in risk and resilience.</h2>
+            <p class="section-intro">I am not yet conducting formal research, but I am learning the skills that can help me support future work in coding, AI, data analysis, hydrology, and catastrophe modeling.</p>
+            <a class="course-back" href="research-preparation.html">View research preparation →</a>
+          </div>
+
+          <div class="info-grid reveal">
+            <article class="info-panel">
+              <h3>Mentorship</h3>
+              <p>I am currently being mentored by Ahmmed Rahman, a PhD student working under Dr. Hong-Yi Li at the Center of Catastrophe Modeling and Resilience.</p>
+            </article>
+            <article class="info-panel">
+              <h3>Coding &amp; AI</h3>
+              <p>I am developing coding and artificial intelligence skills that can support technical workflows, modeling, automation, and future research analysis.</p>
+            </article>
+            <article class="info-panel">
+              <h3>Data Analysis</h3>
+              <p>I am learning how to organize, interpret, and communicate data so I can approach engineering and environmental questions with stronger evidence.</p>
+            </article>
+            <article class="info-panel">
+              <h3>Hydrology &amp; Catastrophe Modeling</h3>
+              <p>I am beginning to study hydrology and catastrophe modeling, with an interest in how hazards, water systems, and resilience are understood through engineering and data.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="hobbies" class="section alt-section hobbies-section">
+        <div class="container">
+          <div class="section-heading center reveal">
+            <p class="eyebrow">Hobbies &amp; Interests</p>
+            <h2>Beyond the classroom, I enjoy life through curiosity and movement.</h2>
+          </div>
+
+          <div class="info-grid reveal">
+            <article class="info-panel">
+              <h3>Camping &amp; Hiking</h3>
+              <p>I enjoy camping and hiking because they give me time outdoors, keep me active, and let me explore new places while building self-reliance.</p>
+            </article>
+            <article class="info-panel">
+              <h3>Eagle Scout</h3>
+              <p>I am an Eagle Scout, an experience that strengthened my leadership, service, teamwork, planning, and outdoor skills.</p>
+            </article>
+            <article class="info-panel">
+              <h3>History</h3>
+              <p>I enjoy learning about history to better understand how people, societies, and major events have shaped the world.</p>
+            </article>
+            <article class="info-panel">
+              <h3>Philosophy &amp; Psychology</h3>
+              <p>In my free time, I like exploring philosophy and psychology to think more deeply about ideas, human behavior, decision-making, and how people understand the world.</p>
+            </article>
+            <article class="info-panel">
+              <h3>Genealogy</h3>
+              <p>I enjoy learning about genealogy and family history to better understand where my family came from and how earlier generations shaped our story.</p>
+            </article>
+          </div>
+          <a class="course-back" href="hobbies-interests.html">View Hobbies &amp; Interests Page →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="container footer-wrap">
+        <div>
+          <p class="eyebrow">Let’s Connect</p>
+          <h2>Interested in civil engineering, design, and building stronger communities.</h2>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:lwt230@lehigh.edu">lwt230@lehigh.edu</a>
+          <a href="mailto:26LThoman@gmail.com">26LThoman@gmail.com</a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> Landon Thoman. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js?v=3"></script>
+  </body>
+</html>
