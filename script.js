@@ -96,6 +96,75 @@ if (yearNode) {
   yearNode.textContent = new Date().getFullYear();
 }
 
+const fyreAssignments = document.querySelector('#fyre-assignments');
+
+if (fyreAssignments) {
+  const fyreRepository = 'Landon-Thoman-2030/FYRE-Assignments';
+  const fyreTreeUrl = `https://api.github.com/repos/${fyreRepository}/git/trees/main?recursive=1`;
+  const fyreRepositoryUrl = `https://github.com/${fyreRepository}`;
+
+  const createAssignmentCard = (assignment) => {
+    const card = document.createElement('article');
+    card.className = 'resource-item';
+
+    const details = document.createElement('div');
+    const type = document.createElement('p');
+    type.className = 'resource-type';
+    type.textContent = 'Assignment file';
+    const title = document.createElement('h3');
+    title.textContent = assignment.path.split('/').pop();
+    const path = document.createElement('p');
+    path.textContent = assignment.path;
+    details.append(type, title, path);
+
+    const links = document.createElement('div');
+    links.className = 'resource-links';
+    const link = document.createElement('a');
+    link.className = 'resource-link';
+    link.href = assignment.url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = 'View assignment →';
+    links.append(link);
+
+    card.append(details, links);
+    return card;
+  };
+
+  fetch(fyreTreeUrl)
+    .then((response) => {
+      if (!response.ok) throw new Error(`GitHub returned ${response.status}`);
+      return response.json();
+    })
+    .then((tree) => {
+      const assignments = tree.tree
+        .filter((entry) => entry.type === 'blob' && !entry.path.toLowerCase().endsWith('readme.md'))
+        .map((entry) => ({
+          path: entry.path,
+          url: `https://github.com/${fyreRepository}/blob/main/${entry.path.split('/').map(encodeURIComponent).join('/')}`,
+        }));
+
+      fyreAssignments.replaceChildren();
+
+      if (assignments.length === 0) {
+        const emptyMessage = document.createElement('p');
+        emptyMessage.className = 'resource-loading';
+        emptyMessage.textContent = 'No assignments have been added yet.';
+        fyreAssignments.append(emptyMessage);
+        return;
+      }
+
+      assignments.forEach((assignment) => fyreAssignments.append(createAssignmentCard(assignment)));
+    })
+    .catch(() => {
+      fyreAssignments.replaceChildren();
+      const fallback = document.createElement('article');
+      fallback.className = 'resource-item';
+      fallback.innerHTML = `<div><p class="resource-type">GitHub repository</p><h3>FYRE Assignments</h3><p>Assignments could not be loaded right now.</p></div><div class="resource-links"><a class="resource-link" href="${fyreRepositoryUrl}" target="_blank" rel="noopener noreferrer">Open repository →</a></div>`;
+      fyreAssignments.append(fallback);
+    });
+}
+
 navTriggers.forEach((button) => {
   button.addEventListener('click', (event) => {
     event.preventDefault();
